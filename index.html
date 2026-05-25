@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Desafío Web: Fibonacci y Primos</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+
+    <header class="hero-section">
+
+        <div class="decor-circle circle-1"></div>
+        <div class="decor-circle circle-2"></div>
+
+        <div class="container hero-content">
+
+            <span class="badge-top">
+                Desafío Web 2026
+            </span>
+
+            <h1>
+                Matemáticas que resuelven problemas:<br>
+                <span class="text-gradient">
+                    Fibonacci y Números Primos
+                </span>
+            </h1>
+
+            <p class="author">
+                Estudiante: <strong>Roy Anderson Garcia Mendoza</strong>
+            </p>
+
+        </div>
+
+    </header>
+
+    <main class="container">
+
+        <div class="grid-layout">
+
+            <div class="info-column">
+
+                <section class="glass-card animate-fade">
+
+                    <div class="card-icon">🎯</div>
+
+                    <h2>Contexto del Problema Real</h2>
+
+                    <p>
+                        En el ámbito de la seguridad informática y el análisis de datos,
+                        los patrones predecibles representan vulnerabilidades críticas.
+                        Este proyecto aborda el enfoque híbrido de
+                        <strong>"Fibonacci y primos combinados"</strong>
+                        para la generación de claves o códigos de acceso dinámicos.
+
+                        Al fusionar la progresión matemática de Fibonacci con la validación
+                        aritmética de los números primos, se simula un sistema capaz
+                        de detectar valores numéricos más seguros dentro de una cadena
+                        secuencial para la protección de datos.
+                    </p>
+
+                </section>
+
+                <section class="glass-card animate-fade">
+
+                    <div class="card-icon">⚡</div>
+
+                    <h2>Explicación del Algoritmo</h2>
+
+                    <p>
+                        La lógica de la página ejecuta un análisis secuencial en tiempo real
+                        empleando estructuras iterativas eficientes:
+                    </p>
+
+                    <ul class="custom-list">
+
+                        <li>
+                            <strong>Serie de Fibonacci limpia:</strong>
+                            Genera la secuencia matemática sumando los dos términos
+                            anteriores utilizando variables simples, optimizando
+                            memoria al trabajar sin arrays o vectores.
+                        </li>
+
+                        <li>
+                            <strong>Validación de Primalidad:</strong>
+                            Cada valor obtenido es inspeccionado mediante divisiones
+                            exactas. Si el número es divisible únicamente entre
+                            1 y sí mismo, se clasifica como número primo.
+                        </li>
+
+                    </ul>
+
+                </section>
+
+                <section class="glass-card text-highlight animate-fade">
+
+                    <div class="card-icon">💡</div>
+
+                    <h2>Conclusión</h2>
+
+                    <p>
+                        La matemática aplicada demuestra que la integración de
+                        secuencias lógicas y propiedades aritméticas elementales
+                        permite diseñar filtros de datos eficientes.
+
+                        Visualizar qué números de la serie de Fibonacci cumplen
+                        con la condición de ser primos ayuda a comprender cómo
+                        los algoritmos matemáticos pueden utilizarse en simulaciones
+                        de seguridad y criptografía básica.
+                    </p>
+
+                </section>
+
+            </div>
+
+            <div class="interactive-column">
+
+                <section class="glass-card form-card animate-fade">
+
+                    <div class="card-icon">⚙️</div>
+
+                    <h2>Panel de Control</h2>
+
+                    <p class="subtitle">
+                        Ingresa los parámetros requeridos para calcular la secuencia combinada.
+                    </p>
+
+                    <form id="formularioMatematico"
+                          onsubmit="event.preventDefault(); calcularSecuenciaHibrida();">
+
+                        <div class="form-group">
+
+                            <label for="cantidadTerminos">
+                                Cantidad de términos:
+                            </label>
+
+                            <input type="number"
+                                   id="cantidadTerminos"
+                                   min="1"
+                                   max="50"
+                                   placeholder="Ej. 15"
+                                   required>
+
+                            <small class="input-help">
+                                Se recomienda un rango de 1 a 50 términos
+                                para una correcta visualización en pantalla.
+                            </small>
+
+                        </div>
+
+                        <button type="submit" id="btnCalcular">
+
+                            <span>
+                                Calcular y Verificar
+                            </span>
+
+                            <svg class="arrow-icon"
+                                 xmlns="http://www.w3.org/2000/svg"
+                                 fill="none"
+                                 viewBox="0 0 24 24"
+                                 stroke="currentColor">
+
+                                <path stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      stroke-width="2"
+                                      d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                            </svg>
+
+                        </button>
+
+                    </form>
+
+                </section>
+
+                <section class="glass-card result-card animate-fade">
+
+                    <div class="result-header">
+
+                        <h2>Resultado en Pantalla</h2>
+
+                        <span id="contadorPrimos" class="counter-badge">
+                            0 Primos
+                        </span>
+
+                    </div>
+
+                    <div id="resultado" class="results-viewport">
+
+                        <div class="empty-state">
+
+                            <div class="empty-icon">📊</div>
+
+                            <p>
+                                No se han generado datos.
+                                Ingresa un número y presiona el botón para calcular.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <footer class="main-footer">
+
+        <div class="container footer-grid">
+
+            <p class="footer-copy">
+                © 2026 — Desafío Web Interactiva.
+                Todos los derechos reservados.
+            </p>
+
+            <div class="footer-links">
+
+                <a href="https://github.com/RoyKox/desafio-fibonacci-primos"
+                   target="_blank"
+                   class="cyber-btn">
+
+                    <span class="btn-text">
+                        📂 Repositorio Git
+                    </span>
+
+                </a>
+
+                <a href="https://RoyKox.github.io/desafio-fibonacci-primos/"
+                   target="_blank"
+                   class="cyber-btn primary-cyber">
+
+                    <span class="btn-text">
+                        🚀 Página Publicada Live
+                    </span>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
