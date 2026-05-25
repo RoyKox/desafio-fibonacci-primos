@@ -9,10 +9,9 @@ La aplicación fue diseñada utilizando un enfoque visual moderno con estilo Gla
 # 🚀 Enlaces del Proyecto
 
 - **Repositorio GitHub:**  
-  https://github.com/TU_USUARIO/TU_REPOSITORIO
-
+  https://github.com/RoyKox/desafio-fibonacci-primos
 - **Página Publicada (GitHub Pages):**  
-  https://TU_USUARIO.github.io/TU_REPOSITORIO
+  https://RoyKox.github.io/desafio-fibonacci-primos/
 
 ---
 
